@@ -56,6 +56,10 @@
 		</dict>
 		<dict>
 			<key>include</key>
+			<string>#anonymous_pattern_matches</string>
+		</dict>
+		<dict>
+			<key>include</key>
 			<string>#keywords</string>
 		</dict>
 	</array>
@@ -67,7 +71,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>\b(fun|function)\b</string>
+					<string>\b(fun)\b</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -95,6 +99,18 @@
 							<string>#variables</string>
 						</dict>
 					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>anonymous_pattern_matches</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\bfunction\b</string>
+					<key>name</key>
+					<string>keyword.other.function-definition.fsharp</string>
 				</dict>
 			</array>
 		</dict>
