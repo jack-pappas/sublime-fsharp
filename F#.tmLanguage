@@ -67,7 +67,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>\b(fun)\b</string>
+					<string>\b(fun|function)\b</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
