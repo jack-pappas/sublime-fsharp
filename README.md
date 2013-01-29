@@ -26,6 +26,17 @@ F# syntax definitions for [Sublime Text 2](http://www.sublimetext.com/). When in
       (* Some comment text, with a link below it:
          http://foobar.com/baz *)
       ```
+  - The following code isn't highlighted correctly when the record instantiation is moved above the `List.foldBack` and the forward pipeline `|>` operator is used to apply the record to `List.foldBack`. It's likely a scoping-related issue, since TextMate / Sublime Text 2 syntax definitions only allow patterns to be matched within a single line. Scoping constructs must be used to identify multi-line patterns.
+
+      ```fsharp
+      { Header = $1;
+        Tokens = [];
+        Types = [];
+        Associativities = [];
+        StartSymbols = [];
+        Rules = $4; }
+      |> List.foldBack (fun f x -> f x) $2
+      ```
 
 - Future
   - Syntax highlighting for F# Interactive when used through SublimeREPL.
