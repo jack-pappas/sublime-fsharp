@@ -1,0 +1,16 @@
+{
+    "shell_cmd": "build.bat \"$file\"",
+    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+    "selector": "source.fsharp",
+    "encoding": "iso-8859-1",
+
+    "variants": [{
+        "shell_cmd": "nunit.bat",
+        "name": "Test"
+    },
+
+    {
+        "shell_cmd": "fsi.bat \"$file\"",
+        "name": "Run"
+    }]
+}
